@@ -35,6 +35,29 @@ class KennitalaGenerator
             return kts.size();
         }
 
+        vector<string> getFirstSixAll(){
+            for(int i = MIN_YEAR; i < MAX_YEAR; i++){
+                year = to_string(i).substr(2, 2);
+                for(int j = 1; j <= 12; j++){
+                    if(j < 10){
+                        month = "0" + to_string(j);
+                    }
+                    else{
+                        month = to_string(j);
+                    }
+                    for(int k = 1; k <= 31; k++){
+                        if(k < 10){
+                            date = "0" + to_string(k);
+                        }
+                        else{
+                            date = to_string(k);
+                        }
+                        kts.push_back(date + month + year);
+                    }
+                }
+            }
+            return kts;
+        }
         vector<string> getAll(){
 
             for(int i = MIN_YEAR; i < MAX_YEAR; i++){
