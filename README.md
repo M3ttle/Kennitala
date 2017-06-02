@@ -1,0 +1,2 @@
+# Kennitala
+Icelandic Kennitala check
